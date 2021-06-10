@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="blood">
   
 <header class="header">
   <div class="wrapper">
@@ -34,12 +34,25 @@
   <div class="wrapper">
     <div class="film-block">
       <span class="film__date">16 сентября 2021</span>
-      <div class="film__title"><img src="./icons/venom-2.svg" alt="Venom 2"></div>
+      <div class="film__title"><img src="./icons/title.svg" alt="Venom 2"></div>
       <p class="film__description">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.</p>
+      <div class="film__buttons">
+        <button class="film__play">
+          <img src="./icons/buttons/play.svg" alt="смотреть трейлер">
+          <span class="film__text">смотреть трейлер</span>
+        </button>
+        <a href="#" class="film__ticket">
+          <img src="./icons/buttons/ticket.svg" alt="билеты на премьеру">
+          <span class="film__text film__text_white">билеты на премьеру</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
+<div class="venom">
+  <img src="./images/venom.png" alt="Venom">
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
