@@ -50,9 +50,21 @@ button {
 }
 
 .wrapper {
-  max-width: 1140px;
-  padding: 0;
+  max-width: 1190px;
+  padding: 0 25px;
   margin: 0 auto;
+}
+
+.venom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 728px;
+  width: 50%;
+}
+
+.blood {
+  background: url('../images/bg/blood.png') no-repeat top right, #14131A url('../images/bg/background.jpg') no-repeat center center / cover;
 }
 
 .header {
@@ -74,6 +86,41 @@ button {
   height: 71px;
 }
 
+.header__closed {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__open {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__text {
+  display: block;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-right: 10px;
+}
+
+.header__text_black {
+  color: #14131A;
+}
+
+.header__closed img {
+  width: 24px;
+  height: 14px;
+}
+
+.header__open img {
+  width: 22px;
+  height: 18px;
+}
+
 .header__list {
   display: flex;
   align-items: center;
@@ -90,6 +137,10 @@ button {
   line-height: 16px;
 }
 
+.film {
+  margin-bottom: 115px;
+}
+
 .film__date {
   display: block;
   color: rgba(255, 255, 255, 0.8);
@@ -100,6 +151,7 @@ button {
 }
 
 .film__title {
+  max-width: 834px;
   margin-bottom: 40px;
 }
 
@@ -149,14 +201,8 @@ button {
   color: #ffffff;
 }
 
-.venom {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.blood {
-  background: url('../images/bg/blood.png') no-repeat top right, #14131A url('../images/bg/background.jpg') no-repeat center center / cover;
+.about {
+  margin-bottom: 115px;
 }
 
 .about-block {
@@ -192,7 +238,7 @@ button {
   margin-bottom: 15px;
 }
 
-.about__subtitle {
+.about__subtitle_small {
   margin-bottom: 5px;
 }
 
@@ -217,6 +263,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   width: 356px;
   height: 205px;
   background: url('../images/trailer-cover.jpg') no-repeat center center / cover;
@@ -253,4 +300,153 @@ button {
 
 .about__producer, .about__scenario {
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .venom {
+    top: 50px;
+  }
+
+  .blood {
+    background: #14131A url('../images/bg/background.jpg') no-repeat center center / cover;
+  }
+
+  .film {
+    margin-bottom: 70px;
+  }
+
+  .about-block {
+    flex-direction: column;
+  }
+  
+  .about__left, .about__right {
+    flex-basis: 100%;
+  }
+
+  .about__left {
+    margin-bottom: 40px;
+  }
+
+  .about {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .venom {
+    top: 100px;
+  }
+
+  .header {
+    padding-top: 15px;
+    margin-bottom: 40px;
+  }
+
+  .header-block {
+    justify-content: space-between;
+  }
+
+  .header__closed {
+    display: flex;
+  }
+
+  .header__open {
+    position: fixed;
+    top: 42px;
+    right: 25px;
+    z-index: 100;
+    display: flex;
+    transform: translateX(300%);
+    transition: transform 0.2s;
+    transition-delay: 0.4s;
+    opacity: 0;
+  }
+
+  .header__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+  }
+
+  .header__item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .header__link {
+    color: #14131A;
+  }
+
+  .film__date {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .film__title {
+    margin-bottom: 20px;
+  }
+  
+  .film__description {
+    max-width: 270px;
+    line-height: 130%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  .film__buttons {
+    flex-direction: column;
+  }
+  
+  .film__play {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .about__description {
+    max-width: 270px;
+    margin-bottom: 40px;
+  }
+
+  .about__starring {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .about__list_column-two {
+    column-count: 1;
+  }
+
+  .about__trailer {
+    width: 270px;
+    height: 156px;
+  }
+
+  .about__right {
+    flex-direction: column;
+  }
+
+  .about__poster {
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+
+  .about__poster img {
+    width: 270px;
+  }
+
+  .open {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }

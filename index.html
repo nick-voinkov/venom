@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="./icons/logo.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,6 +19,14 @@
     <div class="header-block">
       <a href="./index.html" class="header__logo"><img src="./icons/logo.png" alt="Venom"></a>
       <nav class="header__nav">
+        <button class="header__closed">
+          <span class="header__text">Меню</span>
+          <img src="./icons/hamburger/closed.svg" alt="Меню">
+        </button>
+        <button class="header__open">
+          <span class="header__text header__text_black">Закрыть</span>
+          <img src="./icons/hamburger/open.svg" alt="Закрыть">
+        </button>
         <ul class="header__list">
           <li class="header__item"><a href="./about.html" class="header__link">О фильме</a></li>
           <li class="header__item"><a href="#" class="header__link">Трейлер</a></li>
@@ -36,10 +45,10 @@
       <div class="film__title"><img src="./icons/title.svg" alt="Venom 2"></div>
       <p class="film__description">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.</p>
       <div class="film__buttons">
-        <button class="film__play">
+        <a data-fancybox href="https://www.youtube.com/watch?v=EHaOCkk6KTE" class="film__play">
           <img src="./icons/buttons/play.svg" alt="Смотреть трейлер">
           <span class="film__text">Смотреть трейлер</span>
-        </button>
+        </a>
         <a href="#" class="film__ticket">
           <img src="./icons/buttons/ticket.svg" alt="Билеты на премьеру">
           <span class="film__text film__text_white">Билеты на премьеру</span>
@@ -54,6 +63,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
